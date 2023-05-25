@@ -1,22 +1,60 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <div class="img">
+          <img src="../../assets/balao.jpg.jpg" alt="Balão">
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="form">
+          <form>
+            <div class="side">
+              <div class="tittle">
+                <h2>Criar Conta</h2>
+              </div>
+              <div class="content">
+                <ion-item>
+                  <ion-label>Nome</ion-label>
+                  <ion-input></ion-input>
+                </ion-item>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+                <ion-item>
+                  <ion-label>E-mail</ion-label>
+                  <ion-input></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>Senha</ion-label>
+                  <ion-input placeholder="*****"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>Confirmar Senha</ion-label>
+                  <ion-input placeholder="*****"></ion-input>
+                </ion-item>
+              </div>
+              <div class="botao">
+                <button>Criar Conta</button>
+              </div>
+            </div>
+            <div class="bottom-side">
+              <div class="others">
+                <p>Login com</p>
+                <div class="botao-others">
+                  <button>facebook</button>
+                </div>
+                <div class="botao-others">
+                  <button>twitter</button>
+                </div>
+                <div class="botao-others">
+                  <button>google</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
