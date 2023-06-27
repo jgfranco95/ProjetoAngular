@@ -1,22 +1,122 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" color="dark">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" color="primary">
+        <ion-item>
+      
+        <ion-label class="display"  name="display"> {{this.valor}}</ion-label>
+        </ion-item>
+        
+      </ion-col>
+    </ion-row>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-row>
+      <ion-col size="3">
+        <ion-button size="large" expand="block" color="warning" (click)='limparValor()'>
+          C
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="light" (click)="inverterValor()">
+          +/-
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="light" (click)="calcularPorcentagem()">
+          %
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="tertiary" (click)="acumularValor('/')">
+          /
+        </ion-button>
+      </ion-col>
+    </ion-row>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+    <ion-row>
+      <ion-col size="3">
+        <ion-button size="large" expand="full"  color="medium"  class="num_button" (click)="acumularValor('7')">7</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="medium" class="num_button" (click)="acumularValor('8')">
+          8
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full"color="medium" class="num_button" (click)="acumularValor('9')">
+          9
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="tertiary" (click)="acumularValor('*')">
+          <ion-icon size="large" name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="medium" class="num_button" (click)="acumularValor('4')">
+          4
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="medium" class="num_button" (click)="acumularValor('5')">
+          5
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full "  color="medium" class="num_button" (click)="acumularValor('6')">
+          6
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="tertiary" (click)="acumularValor('-')">
+          <ion-icon size="large" name="remove"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="medium" class="num_button" (click)="acumularValor('1')">
+          1
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full"  color="medium" class="num_button" (click)="acumularValor('2')">
+          2
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="medium" class="num_button" (click)="acumularValor('3')">
+          3
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="tertiary" (click)="acumularValor('+')">
+          <ion-icon size="large" name="add"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col size="6">
+        <ion-button size="large" expand="full" color="medium" class="num_button" (click)="acumularValor('0')">
+          0
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="medium" (click)="acumularValor('.')">
+          ,
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button size="large" expand="full" color="tertiary" (click)="calcularValor()">
+          =
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
